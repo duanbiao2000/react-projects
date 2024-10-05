@@ -5,7 +5,9 @@ export const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
+  // 设置查询参数
   const [query, setQuery] = useState('batman')
+  // 使用自定义hook获取数据
   const { isLoading, error, data: movies } = useFetch(`&s=${query}`)
 
   return (
@@ -16,6 +18,7 @@ const AppProvider = ({ children }) => {
 }
 // make sure use
 export const useGlobalContext = () => {
+  // 使用全局上下文
   return useContext(AppContext)
 }
 

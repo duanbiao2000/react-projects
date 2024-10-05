@@ -22,6 +22,7 @@ function App() {
   };
 
   useEffect(() => {
+    // 设置文档根元素的class属性为theme变量
     document.documentElement.className = theme;
     localStorage.setItem('theme', theme);
   }, [theme]);

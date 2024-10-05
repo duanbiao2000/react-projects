@@ -26,12 +26,17 @@ function App() {
     })
   }
   // 上一页
+  // 定义一个函数，用于翻到上一页
   const prevPage = () => {
+    // 使用 setPage 函数，将当前页码减一
     setPage((oldPage) => {
+      // 定义一个变量，用于存储上一页的页码
       let prevPage = oldPage - 1
+      // 如果上一页的页码小于0，则将上一页的页码设置为数据长度减一
       if (prevPage < 0) {
         prevPage = data.length - 1
       }
+      // 返回上一页的页码
       return prevPage
     })
   }
