@@ -1,9 +1,15 @@
+// 导入React库
 import React from 'react';
+// 导入图片
 import phoneImg from './images/phone.svg';
+// 导入全局上下文
 import { useGlobalContext } from './context';
 
+// 定义Hero组件
 const Hero = () => {
+  // 从全局上下文中获取closeSubmenu函数
   const { closeSubmenu } = useGlobalContext();
+  // 返回Hero组件的JSX
   return (
     <section className='hero' onMouseOver={closeSubmenu}>
       <div className='hero-center'>
@@ -27,4 +33,5 @@ const Hero = () => {
   );
 };
 
+// 导出Hero组件
 export default Hero;
